@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script defer src="CovidTrackerDatabase.js"> </script>
+</head>
+<body onload="printOutContacts()">
+  <h1>Contact Tracing Database</h1>
+
+  <table id = "myTable">
+    <tr> <!-- table row -->
+      <td>Name</td> <!-- table cell -->
+      <td>Date</td>
+      <td>Location</td>
+      <td>Distance (m)</td>
+      <td>Length (mins)</td>
+      <td>Masks</td>
+      <td>Delete</td>
+      <td>Confirmed Case</td>
+    </tr>
+      </table>
+
+
+  <hr>
+
+<h3>
+  <div id="contactInput">
+    <form id="trackerForm" name="trackerForm">
+
+      <p>
+        <label>Name</label>
+        <input type="text" name="name">
+      </p>
+
+      <p>
+        <label>Date</label>
+        <input type="date" name="date">
+      </p>
+
+      <p>Location</p>
+        <select name="location" id="location">
+          <option value="indoors">Indoors</option>
+          <option value="outdoors">Outdoors</option>
+        </select>
+
+      <p>
+        <label>Distance (in meters)</label>
+        <input type="number" name="distance" min="0">
+      </p>
+
+      <p>
+        <label>Length (in minutes)</label>
+        <input type="number" name="len" min="0">
+      </p>
+
+      <p>Masks</p>
+        <select name="masks" id="masks">
+          <option value="yes">masks on</option>
+          <option value="no">no masks</option>
+        </select>
+
+
+
+    </form>
+  </div>
+
+</h3>
+
+<button onclick="addContact()">Submit</button>
+
+
+
+
+</body>
+</html>
